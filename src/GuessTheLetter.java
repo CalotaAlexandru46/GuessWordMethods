@@ -8,7 +8,7 @@ public class GuessTheLetter {
         char c = input.nextLine().charAt(0);
         boolean flag = false;
         for (int i = 0; i < str.length(); i++) {
-            if (c == str.charAt(i) && c!=sb.charAt(i)) {
+            if (c == str.charAt(i)) {
                 System.out.println("Bravo, ai ghicit litera:"+c+". Incearca o alta litera:");
                 flag = true;
                 sb.setCharAt(i, c);

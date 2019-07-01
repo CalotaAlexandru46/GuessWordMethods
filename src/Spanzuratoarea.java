@@ -25,14 +25,21 @@ public class Spanzuratoarea {
             do{
                 char c = input.nextLine().charAt(0);
                 boolean flag = false;
+                int c1=1;
                 for (int i = 0; i < str.length(); i++) {
-                    if (c == str.charAt(i)) {
 
+                    if (c == str.charAt(i)) {
                         flag = true;
                         sb.setCharAt(i, c);
+                        if(c1==1) {
+                            System.out.println("Bravo, ai ghicit litera:" + c + ". Incearca o alta litera:");
+                        }
+                        c1++;//debug this shit!!!!
                     }
+
+
                 }
-                System.out.println("Bravo, ai ghicit litera:"+c+". Incearca o alta litera:");
+
                 if(!flag){
                     count++;
                     BuildDeath.buildDeath(o,count);
@@ -44,7 +51,7 @@ public class Spanzuratoarea {
                 System.out.println(sb);
                 OutputOmulet.outputOmulet(o);
             }while(sb.toString().contains("-"));
-            System.out.println("Ati gresit de " + count + " ori.");
+            System.out.println("Ai castigat gresind de " + count + " ori.");
             System.out.println("Vrei sa mai incerci o data? Tasteaza Da sau Nu:");
 
             String reluareJoc= input.nextLine();
